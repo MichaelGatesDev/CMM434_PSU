@@ -1,74 +1,67 @@
 /* ---- OVERRIDES --- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.75em auto;
+}
+
+h4,
+h5,
+h6 {
+    text-transform: none;
+    font-variant: small-caps;
+}
+
+
 h1 {
     display: block;
-    font-size: 2em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
-    margin-left: 0;
-    margin-right: 0;
+    font-size: 3em;
     font-weight: bold;
+    margin: 0.25em auto;
 }
 
 h2 {
     display: block;
     font-size: 1.5em;
-    margin-top: 0.83em;
-    margin-bottom: 0.83em;
-    margin-left: 0;
-    margin-right: 0;
     font-weight: bold;
+    margin: 0.5em auto;
 }
 
 h3 {
     display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 900;
+    margin: 0.5em auto;
 }
 
 h4 {
     display: block;
-    font-size: 1em;
-    margin-top: 1.33em;
-    margin-bottom: 1.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+    font-size: 0.9em;
+    margin: 1em auto;
 }
 
 h5 {
     display: block;
-    font-size: .83em;
-    margin-top: 1.67em;
-    margin-bottom: 1.67em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+    font-size: .7em;
+    margin: 0.25em 0;
 }
 
 h6 {
     display: block;
     font-size: .67em;
-    margin-top: 2.33em;
-    margin-bottom: 2.33em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
+    margin: 0.25em 0;
 }
 
-body
-{
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+    font-family: 'Raleway', sans-serif;
 }
 
-a,
-a:visited {
-    color: rgb(45, 90, 212);
-    text-decoration: none;
-}
 
 header h1 {
     text-align: center;
@@ -80,19 +73,56 @@ hr {
 
 /* ---- CUSTOM ---- */
 
+
+
+/* --------------------------------------------- */
+/* 
+    Special header lines
+    Credit to https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
+*/
+.header-lined {
+    overflow: hidden;
+}
+
+.header-lined:after {
+    background-color: #000;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: bottom;
+    margin-bottom: 0.2em;
+    width: 100%;
+}
+
+.header-lined:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+.header-lined:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+/* --------------------------------------------- */
+
 .container {
     max-width: 768px;
-    margin: auto;
+    margin: 1.5em auto;
 }
+
 
 .resume-links {
     text-align: center;
 }
 
 .resume-links li {
-    display: inline;
+    display: inline-block;
     margin: 0 0.5em;
+    font-size: 0.9em;
 }
+
 
 nav ul {
     text-align: center;
@@ -101,15 +131,77 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+a,
+a:visited {
+    color: rgb(22, 107, 177);
+    text-decoration: none;
 }
 
 
-.bullet-list
-{
+.bullet-list {
     display: block;
+    margin: 0 1em;
 }
 
-.bullet-list li
-{
+.bullet-list li {
     list-style-type: circle;
+}
+
+
+.inline-row {
+    line-height: 0;
+}
+
+.inline-row>* {
+    display: inline-block;
+}
+
+.right {
+    float: right;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+span.thin {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 100;
+}
+
+span.thick {
+    font-weight: bold;
+}
+
+.jobs {}
+
+.jobs .job {
+    margin: 1em auto;
+}
+
+.jobs .job li {
+    /* line-height: 1em; */
+    margin: 0.25em auto;
+}
+
+.jobs .job li p {
+    line-height: 1.5em;
+}
+
+span i {
+    margin: 0 0.25em;
+}
+
+
+#skills-section p {
+    line-height: 2em;
+}
+
+#backToTop {
+    margin: 1em auto;
 }
