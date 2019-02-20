@@ -1,0 +1,144 @@
+/* -------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.75em auto;
+}
+
+h4,
+h5,
+h6 {
+    text-transform: none;
+    font-variant: small-caps;
+}
+
+
+h1 {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0.25em auto;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0.5em auto;
+}
+
+h3 {
+    display: block;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 900;
+    margin: 0.5em auto;
+}
+
+h4 {
+    display: block;
+    font-size: 0.9em;
+    margin: 1em auto;
+}
+
+h5 {
+    display: block;
+    font-size: .7em;
+    margin: 0.25em 0;
+}
+
+h6 {
+    display: block;
+    font-size: .67em;
+    margin: 0.25em 0;
+}
+
+
+/* -------------------------------------------- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header,
+footer {
+    min-height: 5em;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 1.5em;
+}
+
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    display: inline-block;
+    margin: auto 0.25em auto auto;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+.thick {
+    font-weight: bold;
+}
+
+nav .nav-links {
+    display: inline-block;
+}
+
+nav .nav-links li {
+    display: inline-block;
+    margin: auto 0.25em;
+    font-size: 1.25em;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+footer h2 {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.social-links {
+    margin: 1em auto;
+    line-height: 2em;
+}
+
+.social-links li {}
+
+.social-links li a {
+    color: #3562BD;
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: #004088;
+}
+
+.colored-icon {
+    color: #004088;
+}
+
+h1,
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
