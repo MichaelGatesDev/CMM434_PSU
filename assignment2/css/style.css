@@ -58,6 +58,20 @@ h6 {
 }
 
 
+h1,
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 /* -------------------------------------------- */
 
 body {
@@ -66,16 +80,33 @@ body {
 
 header,
 footer {
-    min-height: 5em;
-    background-color: #f2f2f2;
     text-align: center;
-    padding: 1.5em;
+    width: 100%;
+    padding: 0.5em 0;
+    background-color: #f2f2f2;
 }
 
+
+.stick-to-top {
+    position: fixed;
+    top: 0;
+}
+
+.stick-to-top .container {
+    margin: 1em auto;
+}
+
+nav {
+    width: 100%;
+    padding: 0 3em;
+    background-color: #f2f2f2;
+}
 
 .container {
     max-width: 768px;
     margin: 0 auto;
+
+    padding: 1.5em auto;
 }
 
 nav h1 {
@@ -106,6 +137,11 @@ nav .nav-links li a {
     color: #2e2e2e;
 }
 
+nav .nav-links li a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
 footer h2 {
     font-size: 2em;
     font-weight: 100;
@@ -131,14 +167,33 @@ footer h2 {
     color: #004088;
 }
 
-h1,
-h2 {
-    font-family: 'Fjalla One', sans-serif;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Roboto', sans-serif;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    padding: 1em 0.5em 0.5em 0.5em;
+    width: 100%;
+    line-height: 1.25em;
+
+    border-radius: 0 0 0.25em 0.25em;
+}
+
+.dropdown ul li {
+    display: block;
+    font-size: 1em;
+    margin: 0;
+}
+
+.dropdown ul{
+    text-align: left;
 }

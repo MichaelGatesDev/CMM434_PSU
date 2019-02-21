@@ -25,20 +25,29 @@ page.
 <body>
 
 	<header>
-
-		<nav>
+		<nav class="stick-to-top">
 			<div class="container">
 				<h1><span class="thin">Donoghue</span><span class="thick">Designs</span></h1>
 
 				<ul class="nav-links">
 					<li><a href="#section-photo">Photo</a></li>
 					<li><a href="#section-video">Video</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li>
+						<div class="dropdown">
+							<a href="#">Contact</a>
+							<ul class="dropdown-content">
+								<li><a href="#">Link A</a></li>
+								<li><a href="#">Link B</a></li>
+								<li><a href="#">Link C</a></li>
+							</ul>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</nav>
-
 	</header>
+
+	<div style="height: 1000px;"></div>
 
 	<footer>
 		<div class="container" id="contact">
