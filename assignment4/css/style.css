@@ -1,0 +1,268 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+nav,
+footer {
+    background-color: #E2E2E2;
+
+    padding: 1em 0;
+}
+
+nav h1 {
+    line-height: 2.75em;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: auto 1em;
+}
+
+h2 {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin: 1.5em 1em;
+
+    overflow: hidden;
+}
+
+h2:before {
+    right: 0.5em;
+    margin-left: -50%;
+
+
+    background-color: #F60;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: bottom;
+    margin-bottom: 0.4em;
+    width: 50%;
+}
+
+h2:after {
+    left: 0.5em;
+    margin-right: -50%;
+
+
+    background-color: #F60;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: bottom;
+    margin-bottom: 0.4em;
+    width: 50%;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0.25em auto;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0.5em auto;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+h1 img {
+    width: 50px;
+    vertical-align: bottom;
+    margin: 0 0.5em;
+    padding: 0;
+}
+
+h1 img:hover {
+    animation: waddle 1.25s infinite;
+}
+
+nav h1,
+nav ul,
+nav ul>li {
+    display: inline-block;
+}
+
+nav ul {}
+
+nav>h1 {}
+
+nav ul li {
+    margin: auto 0.5em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: #f60;
+}
+
+main {
+    margin: 1.5em 0;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+#logo {}
+
+#logo img,
+#tempLogo img {
+    height: 200px;
+}
+
+
+
+.book-section {
+    background-color: #e2e2e2;
+
+    margin: 1em 0;
+    padding: 1em;
+
+    border-radius: 10px;
+
+    text-align: left;
+
+    height: 200px;
+
+    animation: popReset 0.15s ease-in-out;
+
+}
+
+.book-section:hover {
+    animation: popOut 0.15s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.book-section img {
+
+    height: 200px;
+
+    float: left;
+
+    margin: 0 1em 0 0;
+}
+
+.book-section .book-details h4 {
+    margin-top: 1em;
+}
+
+.book-section .book-details p {
+    margin-top: 1em;
+}
+
+.read-more {}
+
+.read-more a {
+    color: #F60;
+    text-decoration: none;
+}
+
+.read-more a:hover {
+    text-decoration: underline;
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+
+
+footer ul,
+footer ul>li {
+    display: inline-block;
+}
+
+footer ul {
+    margin: 1em auto;
+}
+
+footer ul li {
+    margin: auto 0.5em;
+}
+
+footer ul li img {
+    height: 40px;
+}
+
+
+
+/* ----------------------------------------------------- */
+
+@keyframes growFromNothing {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes waddle {
+    25% {
+        transform: rotate(2.5deg);
+    }
+
+    50% {
+        transform: rotate(-2.5deg);
+    }
+
+    75% {
+        transform: rotate(2.5deg);
+    }
+
+    100% {
+        transform: rotate(2.5deg);
+    }
+}
+
+@keyframes popOut {
+    from {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    to {
+        transform: scale(1.025);
+        box-shadow: 5px 5px 8px #00000066;
+    }
+}
+
+@keyframes popReset {
+    from {
+        transform: scale(1.025);
+        box-shadow: 5px 5px 8px #00000066;
+    }
+
+    to {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+}
