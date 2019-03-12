@@ -1,0 +1,320 @@
+/* -------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.75em auto;
+}
+
+h4,
+h5,
+h6 {
+    text-transform: none;
+    font-variant: small-caps;
+}
+
+
+h1 {
+    display: block;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0.25em auto;
+}
+
+h2 {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em auto;
+    color: #004088;
+}
+
+h3 {
+    display: block;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 900;
+    margin: 0.5em auto;
+}
+
+h4 {
+    display: block;
+    font-size: 0.9em;
+    margin: 1em auto;
+}
+
+h5 {
+    display: block;
+    font-size: .7em;
+    margin: 0.25em 0;
+}
+
+h6 {
+    display: block;
+    font-size: .67em;
+    margin: 0.25em 0;
+}
+
+
+h1,
+h2 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* -------------------------------------------- */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header,
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+header {
+    height: 70px;
+}
+
+footer {
+    background-color: #f2f2f2;
+}
+
+.stick-to-top {
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+}
+
+.stick-to-top .container {
+    margin: 1em auto;
+}
+
+nav {
+    width: 100%;
+    padding: 0 3em;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    padding: 1.5em auto;
+}
+
+nav h1 {
+    display: inline-block;
+    margin: auto 0.25em auto auto;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+.thick {
+    font-weight: bold;
+}
+
+nav .nav-links {
+    display: inline-block;
+}
+
+nav .nav-links li {
+    display: inline-block;
+    margin: auto 0.25em;
+    font-size: 1.25em;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
+nav .nav-links li a:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer h2 {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.social-links {
+    margin: 1em auto;
+    line-height: 2em;
+}
+
+.social-links li {}
+
+.social-links li a {
+    color: #3562BD;
+    text-decoration: none;
+}
+
+.social-links li a:hover {
+    color: #004088;
+}
+
+.colored-icon {
+    color: #004088;
+}
+
+
+section {
+    margin: 3em 0;
+    text-align: center;
+}
+
+section h2 {
+    margin: 1em auto;
+}
+
+.grid-container {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 300px 300px 300px; */
+    /* grid-template-columns: auto auto auto; */
+    /* grid-column-gap: 25px; */
+    justify-items: center;
+
+    /* border: 1px solid red; */
+}
+
+.grid-item {
+    /* border: 1px solid red; */
+}
+
+.photo-gallery {}
+
+.photo-gallery li {
+    display: inline-block;
+    /* margin: auto; */
+
+    padding: 20px 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.photo-gallery li img {
+    min-width: 100px;
+    min-height: 100px;
+
+    width: 300px;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    object-fit: cover;
+    height: 400px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 22%;
+    width: auto;
+    /* margin-top: -22px; */
+    padding: 3em 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/* Position the "next button" to the right */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
