@@ -34,10 +34,11 @@ h2 {
 
 h3 {
     display: block;
-    font-size: 1em;
+    font-size: 1.5em;
     font-style: normal;
     font-weight: 900;
     margin: 0.5em auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 h4 {
@@ -70,7 +71,6 @@ h5,
 h6 {
     font-family: 'Roboto', sans-serif;
 }
-
 
 
 /* -------------------------------------------- */
@@ -226,6 +226,52 @@ iframe {
     height: 480px;
 }
 
-.video-marquee {
+.hidden {
+    display: none;
+}
+
+.video-slider {
     margin: 3em 0;
+}
+
+.video-slider .video {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.video-slider .video h3 {
+    margin: 0.5em auto;
+}
+
+.video-slider .video p {
+    text-align: left;
+    line-height: 1.4em;
+    margin: 1em auto;
+
+    max-width: 720px;
+}
+
+.video-slider .controls {}
+
+.video-slider .controls li {
+    display: inline-block;
+    margin: 0 0.25em;
+}
+
+
+.video-slider .controls li a,
+.video-slider .controls li a:active {
+    color: #2e2e2e;
+}
+
+.video-slider .controls li .active {
+    color: #000000;
+}
+
+.fa-instagram {
+    color: purple;
+}
+
+.fa-snapchat {
+    color: yellow;
 }

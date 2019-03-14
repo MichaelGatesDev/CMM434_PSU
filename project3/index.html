@@ -65,8 +65,47 @@ page.
 	<section id="videography">
 		<h2>Videography</h2>
 		<div class="container">
-			<div class="video-marquee">
-				<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
+			<div class="video-slider">
+				<span class="video" id="video1">
+					<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
+					<h3>
+						Why I Stopped Snowboarding
+					</h3>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, qui. Nulla eaque blanditiis voluptatem,
+						perspiciatis voluptas beatae eum distinctio aliquid maiores enim facere, adipisci cupiditate minima architecto ex
+						quae a?
+					</p>
+				</span>
+				<span class="video hidden" id="video2">
+					<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
+					<h3>
+						Why I Stopped Snowboarding
+					</h3>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, qui. Nulla eaque blanditiis voluptatem,
+						perspiciatis voluptas beatae eum distinctio aliquid maiores enim facere, adipisci cupiditate minima architecto ex
+						quae a?
+					</p>
+				</span>
+				<span class="video hidden" id="video3">
+					<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
+					<h3>
+						Why I Stopped Snowboarding
+					</h3>
+					<p>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, qui. Nulla eaque blanditiis voluptatem,
+						perspiciatis voluptas beatae eum distinctio aliquid maiores enim facere, adipisci cupiditate minima architecto ex
+						quae a?
+					</p>
+				</span>
+				<div class="controls">
+					<ul>
+						<li><a href="#video1" class="control active"><i class="fas fa-circle"></i></a></li>
+						<li><a href="#video2" class="control"><i class="fas fa-circle"></i></a></li>
+						<li><a href="#video3" class="control"><i class="fas fa-circle"></i></a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -85,6 +124,24 @@ page.
 	</footer>
 
 	<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$('.control').click(function (e) {
+			e.preventDefault();
+
+			var newVideoID = $(this).attr('href');
+			$(newVideoID).removeClass('hidden');
+			$(this).addClass('active');
+
+			$('.control').each(function (index, control) {
+				var targetVideoID = $(control).attr('href');
+				if (targetVideoID !== newVideoID) {
+					$(control).removeClass('active');
+					$(targetVideoID).addClass('hidden');
+				}
+			});
+		});
+	</script>
 
 </body>
 
