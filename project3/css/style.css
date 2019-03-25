@@ -76,6 +76,21 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------- */
+/*                  A bit hacky                 */
+/* -------------------------------------------- */
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
 /* -------------------------------------------- */
 /*                  HEADER & FOOTER             */
 /* -------------------------------------------- */
