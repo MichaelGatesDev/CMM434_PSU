@@ -98,6 +98,7 @@ header h1 a {
 
 footer {
   background-color: #eeeeee;
+  padding: 2em 0;
 }
 
 .stick-to-top {
@@ -107,7 +108,7 @@ footer {
 }
 
 .stick-to-top .container {
-  margin: 1em auto;
+  padding: 1em 0;
 }
 
 .container {
@@ -115,6 +116,41 @@ footer {
   margin: 0 auto;
 
   padding: 1.5em auto;
+}
+
+footer h2 {
+  font-size: 2em;
+  font-weight: 100;
+  padding: 0.5em 0;
+}
+
+.social-links {
+  margin: 1em auto;
+  line-height: 2em;
+}
+
+.social-links li {
+}
+
+.social-links li a {
+  color: #3562bd;
+  text-decoration: none;
+}
+
+.social-links li a:hover {
+  color: #004088;
+}
+
+.colored-icon {
+  color: #004088;
+}
+
+.fa-instagram {
+  color: purple;
+}
+
+.fa-snapchat {
+  color: yellow;
 }
 
 /* -------------------------------------------- */
@@ -158,44 +194,6 @@ nav .nav-links li a {
 nav .nav-links li a:hover {
   text-decoration: none;
   color: #000000;
-}
-
-/* -------------------------------------------- */
-/*                  FOOTER                      */
-/* -------------------------------------------- */
-
-footer h2 {
-  font-size: 2em;
-  font-weight: 100;
-}
-
-.social-links {
-  margin: 1em auto;
-  line-height: 2em;
-}
-
-.social-links li {
-}
-
-.social-links li a {
-  color: #3562bd;
-  text-decoration: none;
-}
-
-.social-links li a:hover {
-  color: #004088;
-}
-
-.colored-icon {
-  color: #004088;
-}
-
-.fa-instagram {
-  color: purple;
-}
-
-.fa-snapchat {
-  color: yellow;
 }
 
 /* -------------------------------------------- */
@@ -291,7 +289,7 @@ iframe {
 
 .video-slider .previous:hover,
 .video-slider .next:hover {
-    background-color: #e2e2e2;
+  background-color: #e2e2e2;
 }
 
 .video-slider .previous {
