@@ -103,6 +103,7 @@ footer {
 .stick-to-top {
   position: fixed;
   top: 0;
+  z-index: 9999;
 }
 
 .stick-to-top .container {
@@ -275,6 +276,29 @@ iframe {
 }
 
 .video-slider .controls {
+}
+
+.video-slider .previous,
+.video-slider .next {
+  font-size: 3em;
+  position: absolute;
+  line-height: 400px;
+  margin-top: 1em;
+  background-color: #f2f2f2;
+  padding: 0 0.25em;
+  cursor: pointer;
+}
+
+.video-slider .previous:hover,
+.video-slider .next:hover {
+    background-color: #e2e2e2;
+}
+
+.video-slider .previous {
+  left: 0;
+}
+.video-slider .next {
+  right: 0;
 }
 
 .video-slider .controls li {
