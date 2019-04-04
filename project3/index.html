@@ -10,18 +10,18 @@ page.
 
 <head>
 
-	<title>Michael Gates Project 2</title>
+	<title>Michael Gates Project 3</title>
 	<meta charset="UTF-8">
+
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/lightbox.min.css">
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto" rel="stylesheet">
-
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-	 crossorigin="anonymous">
-
-	<link rel="stylesheet" href="css/lightbox.min.css">
 </head>
 
 <body>
@@ -29,8 +29,7 @@ page.
 	<header>
 		<nav class="stick-to-top">
 			<div class="container">
-				<h1><span class="thin">Donoghue</span><span class="thick">Designs</span></h1>
-
+				<h1><a href=""><span class="thin">Donoghue</span><span class="thick">Designs</span></a></h1>
 				<ul class="nav-links">
 					<li><a href="#photography">Photo</a></li>
 					<li><a href="#videography">Video</a></li>
@@ -66,7 +65,9 @@ page.
 		<h2>Videography</h2>
 		<div class="container">
 			<div class="video-slider">
-				<span class="video" id="video1">
+				<div class="previous">&leftarrow;</div>
+				<div class="next">&rightarrow;</div>
+				<span class="video" id="video-1">
 					<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
 					<h3>
 						Why I Stopped Snowboarding
@@ -77,10 +78,10 @@ page.
 						quae a?
 					</p>
 				</span>
-				<span class="video hidden" id="video2">
-					<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
+				<span class="video hidden" id="video-2">
+					<iframe src="https://www.youtube.com/embed/TuC6BLaUFDU"></iframe>
 					<h3>
-						Why I Stopped Snowboarding
+						Epic Big Mountain Snowboarding
 					</h3>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, qui. Nulla eaque blanditiis voluptatem,
@@ -88,10 +89,10 @@ page.
 						quae a?
 					</p>
 				</span>
-				<span class="video hidden" id="video3">
-					<iframe src="https://www.youtube.com/embed/VHdb54o11cs"></iframe>
+				<span class="video hidden" id="video-3">
+					<iframe src="https://www.youtube.com/embed/qsd8uaex-Is"></iframe>
 					<h3>
-						Why I Stopped Snowboarding
+						How To Improve Your Riding On A Snowboard
 					</h3>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum, qui. Nulla eaque blanditiis voluptatem,
@@ -101,9 +102,9 @@ page.
 				</span>
 				<div class="controls">
 					<ul>
-						<li><a href="#video1" class="control active"><i class="fas fa-circle"></i></a></li>
-						<li><a href="#video2" class="control"><i class="fas fa-circle"></i></a></li>
-						<li><a href="#video3" class="control"><i class="fas fa-circle"></i></a></li>
+						<li><a href="#video-1" class="control active"><i class="fas fa-circle"></i></a></li>
+						<li><a href="#video-2" class="control"><i class="fas fa-circle"></i></a></li>
+						<li><a href="#video-3" class="control"><i class="fas fa-circle"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -126,21 +127,91 @@ page.
 	<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
 
 	<script type="text/javascript">
+
+		let minVideoIndex = 1;
+		let currentVideoIndex = minVideoIndex;
+		let maxVideoIndex = 1;
+
+		// setup indices
+		$('.control').each(function (index, elem) {
+			var id = $(elem).attr('href');
+			var parsedID = parseInt(id.replace('#video-', ''));
+			if (parsedID < minVideoIndex) minVideoIndex = parsedID;
+			if (parsedID > maxVideoIndex) maxVideoIndex = parsedID;
+		});
+
+		console.log("Min video ID: " + minVideoIndex);
+		console.log("Max video ID: " + maxVideoIndex);
+
+		// hide all videos
+		hideAll();
+		// show first video
+		showVideo(minVideoIndex);
+
 		$('.control').click(function (e) {
 			e.preventDefault();
 
 			var newVideoID = $(this).attr('href');
-			$(newVideoID).removeClass('hidden');
-			$(this).addClass('active');
+			var parsed = parseInt(newVideoID.replace('#video-', ''));
 
+			hideAll();
+			showVideo(parsed);
+			setActiveControl(parsed);
+		});
+
+		$('.video-slider .previous').click(function (e) {
+			e.preventDefault();
+			showPreviousVideo();
+		});
+
+		$('.video-slider .next').click(function (e) {
+			e.preventDefault();
+			showNextVideo();
+		});
+
+		function hideAll() {
+			for (var i = minVideoIndex; i <= maxVideoIndex; i++) {
+				var htmlID = '#video-' + i;
+				$(htmlID).addClass('hidden');
+			}
+		}
+
+		function showVideo(index) {
+			var htmlID = '#video-' + index;
+			$(htmlID).removeClass('hidden');
+
+			currentVideoIndex = index;
+		}
+
+		function showPreviousVideo() {
+			if (currentVideoIndex - 1 >= minVideoIndex) {
+				currentVideoIndex -= 1;
+				hideAll();
+				showVideo(currentVideoIndex);
+				setActiveControl(currentVideoIndex);
+			}
+		}
+
+		function showNextVideo() {
+			if (currentVideoIndex + 1 <= maxVideoIndex) {
+				currentVideoIndex += 1;
+				hideAll();
+				showVideo(currentVideoIndex);
+				setActiveControl(currentVideoIndex);
+			}
+		}
+
+		function setActiveControl(newIndex) {
 			$('.control').each(function (index, control) {
-				var targetVideoID = $(control).attr('href');
-				if (targetVideoID !== newVideoID) {
+				if (index + 1 === newIndex) {
+					$(control).addClass('active');
+				}
+				else {
 					$(control).removeClass('active');
-					$(targetVideoID).addClass('hidden');
 				}
 			});
-		});
+		}
+
 	</script>
 
 </body>

@@ -1,4 +1,6 @@
 /* -------------------------------------------- */
+/*                  Headers                     */
+/* -------------------------------------------- */
 
 h1,
 h2,
@@ -6,272 +8,322 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0.75em auto;
+  margin: 0.75em auto;
 }
 
 h4,
 h5,
 h6 {
-    text-transform: none;
-    font-variant: small-caps;
+  text-transform: none;
+  font-variant: small-caps;
 }
 
-
 h1 {
-    display: block;
-    font-size: 3em;
-    font-weight: bold;
-    margin: 0.25em auto;
+  display: block;
+  font-size: 3em;
+  font-weight: bold;
 }
 
 h2 {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0.5em auto;
-    color: #004088;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  color: #004088;
+  padding: 1em 0;
+  margin: 0;
 }
 
 h3 {
-    display: block;
-    font-size: 1.5em;
-    font-style: normal;
-    font-weight: 900;
-    margin: 0.5em auto;
-    font-family: 'Roboto', sans-serif;
+  display: block;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
 }
 
 h4 {
-    display: block;
-    font-size: 0.9em;
-    margin: 1em auto;
+  display: block;
+  font-size: 0.9em;
 }
 
 h5 {
-    display: block;
-    font-size: .7em;
-    margin: 0.25em 0;
+  display: block;
+  font-size: 0.7em;
 }
 
 h6 {
-    display: block;
-    font-size: .67em;
-    margin: 0.25em 0;
+  display: block;
+  font-size: 0.67em;
 }
-
 
 h1,
 h2 {
-    font-family: 'Fjalla One', sans-serif;
+  font-family: "Fjalla One", sans-serif;
 }
 
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-
+/* -------------------------------------------- */
+/*                  BODY                        */
 /* -------------------------------------------- */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: "Segoe UI", sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------- */
+/*                  A bit hacky                 */
+/* -------------------------------------------- */
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -250px;
+  visibility: hidden;
+}
+
+/* -------------------------------------------- */
+/*                  HEADER & FOOTER             */
+/* -------------------------------------------- */
 
 header,
 footer {
-    text-align: center;
-    width: 100%;
-    padding: 0.5em 0;
+  text-align: center;
+  width: 100%;
+  padding: 0.5em 0;
 }
 
 header {
-    height: 70px;
+  height: 70px;
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #000000;
 }
 
 footer {
-    background-color: #f2f2f2;
+  background-color: #eeeeee;
+  padding: 2em 0;
 }
 
 .stick-to-top {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 
 .stick-to-top .container {
-    margin: 1em auto;
-}
-
-nav {
-    width: 100%;
-    padding: 0 3em;
-    background-color: #f2f2f2;
+  padding: 1em 0;
 }
 
 .container {
-    max-width: 1024px;
-    margin: 0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
 
-    padding: 1.5em auto;
-}
-
-nav h1 {
-    display: inline-block;
-    margin: auto 0.25em auto auto;
-}
-
-.thin {
-    font-weight: 100;
-}
-
-.thick {
-    font-weight: bold;
-}
-
-nav .nav-links {
-    display: inline-block;
-}
-
-nav .nav-links li {
-    display: inline-block;
-    margin: auto 0.25em;
-    font-size: 1.25em;
-}
-
-nav .nav-links li a {
-    text-decoration: none;
-    color: #2e2e2e;
-}
-
-nav .nav-links li a:hover {
-    text-decoration: none;
-    color: #000000;
+  padding: 1.5em auto;
 }
 
 footer h2 {
-    font-size: 2em;
-    font-weight: 100;
+  font-size: 2em;
+  font-weight: 100;
+  padding: 0.5em 0;
 }
 
 .social-links {
-    margin: 1em auto;
-    line-height: 2em;
+  margin: 1em auto;
+  line-height: 2em;
 }
 
-.social-links li {}
+.social-links li {
+}
 
 .social-links li a {
-    color: #3562BD;
-    text-decoration: none;
+  color: #3562bd;
+  text-decoration: none;
 }
 
 .social-links li a:hover {
-    color: #004088;
+  color: #004088;
 }
 
 .colored-icon {
-    color: #004088;
-}
-
-
-section {
-    margin: 3em 0;
-    text-align: center;
-}
-
-section h2 {
-    margin: 1em auto;
-}
-
-.grid-container {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-columns: 300px 300px 300px; */
-    /* grid-template-columns: auto auto auto; */
-    /* grid-column-gap: 25px; */
-    justify-items: center;
-
-    /* border: 1px solid red; */
-}
-
-.grid-item {
-    /* border: 1px solid red; */
-}
-
-.photo-gallery {}
-
-.photo-gallery li {
-    display: inline-block;
-    /* margin: auto; */
-
-    padding: 20px 20px;
-    font-size: 30px;
-    text-align: center;
-}
-
-.photo-gallery li img {
-    min-width: 100px;
-    min-height: 100px;
-
-    width: 300px;
-    height: 200px;
-
-    object-fit: cover;
-}
-
-iframe {
-    width: 720px;
-    height: 480px;
-}
-
-.hidden {
-    display: none;
-}
-
-.video-slider {
-    margin: 3em 0;
-}
-
-.video-slider .video {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.video-slider .video h3 {
-    margin: 0.5em auto;
-}
-
-.video-slider .video p {
-    text-align: left;
-    line-height: 1.4em;
-    margin: 1em auto;
-
-    max-width: 720px;
-}
-
-.video-slider .controls {}
-
-.video-slider .controls li {
-    display: inline-block;
-    margin: 0 0.25em;
-}
-
-
-.video-slider .controls li a,
-.video-slider .controls li a:active {
-    color: #2e2e2e;
-}
-
-.video-slider .controls li .active {
-    color: #000000;
+  color: #004088;
 }
 
 .fa-instagram {
-    color: purple;
+  color: purple;
 }
 
 .fa-snapchat {
-    color: yellow;
+  color: yellow;
+}
+
+/* -------------------------------------------- */
+/*                  NAVIGATION                  */
+/* -------------------------------------------- */
+
+nav {
+  width: 100%;
+  padding: 0 3em;
+  background-color: #eeeeee;
+}
+
+nav h1 {
+  display: inline-block;
+  margin: auto 0.25em auto auto;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.thick {
+  font-weight: bold;
+}
+
+nav .nav-links {
+  display: inline-block;
+}
+
+nav .nav-links li {
+  display: inline-block;
+  margin: auto 0.25em;
+  font-size: 1.25em;
+}
+
+nav .nav-links li a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+
+nav .nav-links li a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* -------------------------------------------- */
+/*                  SECTION                     */
+/* -------------------------------------------- */
+
+section {
+  padding: 1em 0 3em 0;
+  text-align: center;
+}
+
+/* -------------------------------------------- */
+/*                  PHOTO GRID                  */
+/* -------------------------------------------- */
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+
+  /* border: 1px solid red; */
+}
+
+.grid-item {
+  /* border: 1px solid red; */
+}
+
+.photo-gallery {
+}
+
+.photo-gallery li {
+  display: inline-block;
+  /* padding: 20px 20px; */
+  font-size: 30px;
+  text-align: center;
+}
+
+.photo-gallery li img {
+  min-width: 100px;
+  min-height: 100px;
+
+  width: 300px;
+  height: 200px;
+
+  object-fit: cover;
+}
+
+/* -------------------------------------------- */
+/*                  VIDEO GALLERY               */
+/* -------------------------------------------- */
+
+iframe {
+  width: 720px;
+  height: 480px;
+}
+
+.hidden {
+  display: none;
+}
+
+.video-slider {
+}
+
+.video-slider .video {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.video-slider .video p {
+  text-align: left;
+  line-height: 2em;
+  margin: 1em auto;
+
+  max-width: 720px;
+}
+
+.video-slider .controls {
+}
+
+.video-slider .previous,
+.video-slider .next {
+  font-size: 3em;
+  position: absolute;
+  line-height: 400px;
+  margin-top: 1em;
+  background-color: #f2f2f2;
+  padding: 0 0.25em;
+  cursor: pointer;
+}
+
+.video-slider .previous:hover,
+.video-slider .next:hover {
+  background-color: #e2e2e2;
+}
+
+.video-slider .previous {
+  left: 0;
+}
+.video-slider .next {
+  right: 0;
+}
+
+.video-slider .controls li {
+  display: inline-block;
+  margin: 0 0.25em;
+}
+
+.video-slider .controls li a,
+.video-slider .controls li a:active {
+  color: #2e2e2e;
+}
+
+.video-slider .controls li .active {
+  color: #000000;
 }
