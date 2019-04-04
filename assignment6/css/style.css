@@ -1,0 +1,116 @@
+body {
+    /* background-color: #2e2e2e; */
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+nav h1 {
+    display: inline-block;
+    padding-top: 1em;
+    margin: 0;
+    margin-right: 1em;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #222222;
+}
+
+@media screen and (max-width: 768px) {
+
+    .nav-mobile {
+        display: block;
+        padding: 1em 0;
+    }
+
+    .nav-mobile h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-mobile .menu {
+        display: none;
+
+        background-color: #f2f2f2;
+        position: absolute;
+        left: 0;
+        top: 35px;
+        width: 40%;
+        padding: 0;
+
+        font-size: 1.5em;
+    }
+
+    .nav-mobile .menu li {
+        display: block;
+        padding: 0.5em 0;
+        margin: 0;
+    }
+
+    .nav-mobile .menu li:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .nav-mobile .menu li:nth-child(odd) {
+        background-color: #e2e2e2;
+    }
+
+    .nav-desktop {
+        display: none;
+    }
+
+    .nav-mobile .hamburger {
+        margin: 0.5em 0 0 1.5em;
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    .nav-mobile .hamburger .line {
+        width: 90%;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .nav-mobile {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: block;
+    }
+
+    .nav-desktop .menu {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    .nav-desktop .menu li {
+        display: inline-block;
+        margin: 0 1em;
+    }
+
+    .nav-desktop .menu li a {
+        display: inline-block;
+        padding: 0.5em;
+    }
+
+    .nav-desktop .menu li a:hover {
+        color: red;
+    }
+}
