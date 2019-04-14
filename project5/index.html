@@ -1,10 +1,3 @@
-<!-- 
-Set up the code using HTML5 and CSS3 for the header and footer sections of your Project 2 site design. You are to
-code a single HTML page with an external CSS page attached. You must include the header and footer HTML5
-elements and any additional elements to create the and design the elements needed for those two sections of your
-page.
--->
-
 <!DOCTYPE html>
 <html>
 
@@ -40,30 +33,71 @@ page.
 	</header>
 
 	<section class="club-carousel">
-		<!-- <ul>
-			<li>
-				<div class="club-card">
-					<p class="title">Club International</p>
-					<div class="background-container">
-						<img class="background" src="img/club-international.jpg" alt="">
-					</div>
-				</div>
-			</li>
-		</ul> -->
-		<a href="" class="club-card-container">
-			<div class="club-card">
-				<p class="title">Club International</p>
-				<img class="background" src="img/club-international.jpg" alt="">
-			</div>
+		<a href="" class="club-card">
+			<p class="title">Club International</p>
+			<img class="logo" src="img/club-international.jpg" alt="">
 		</a>
-		<a href="" class="club-card-container">
-				<div class="club-card">
-				<p class="title">Club International</p>
-				<img class="background" src="img/club-international.jpg" alt="">
-			</div>
+		<a href="" class="club-card">
+			<p class="title">Chinese Association</p>
+			<img class="logo" src="img/chinese-association.jpg" alt="">
+		</a>
+		<a href="" class="club-card">
+			<p class="title">JCAP</p>
+			<img class="logo" src="img/jcap.jpg" alt="">
 		</a>
 	</section>
 
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+	<script>
+		let paused = false;
+
+		function setupPositions() {
+			$('.club-card').each(function (index) {
+				var width = $(this).width();
+				$(this).css({
+					'left': index * width
+				});
+
+				var position = $(this).position();
+				var left = position.left;
+				console.log("Starting at: " + left);
+			});
+		}
+
+		function moveLeft(element, amt) {
+
+			if (paused) return;
+
+			var width = element.width();
+			var position = element.position();
+			var left = position.left;
+			var viewportWidth = $(window).width();
+
+			element.css({
+				'left': (left - amt > (-(width)) ? left - amt : viewportWidth + width)
+			});
+		}
+
+		function moveAllLeft() {
+			$('.club-card').each(function (index) {
+				moveLeft($(this), 1);
+			});
+		}
+
+		function start() {
+			setInterval(moveAllLeft, 1000 / 60);
+		}
+
+		$('.club-card').hover(function () {
+			paused = true;
+		}, function () {
+			paused = false;
+		});
+
+		setupPositions();
+		start();
+	</script>
 
 </body>
 
