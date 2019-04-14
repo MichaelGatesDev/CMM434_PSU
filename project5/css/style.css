@@ -1,0 +1,44 @@
+body {
+  font-family: 'Roboto';
+}
+
+.club-carousel {}
+
+.club-carousel ul {
+  margin: 0;
+  padding: 0;
+}
+
+.club-carousel ul li {
+  display: inline-block;
+}
+
+.club-card-container {
+  display: inline-block;
+}
+
+.club-card {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.club-card .title {
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 5px 5px 5px 5px#000000;
+  bottom: 0;
+}
+
+.club-card .background-container {
+  /* overflow: hidden; */
+}
+
+.club-card .background {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
