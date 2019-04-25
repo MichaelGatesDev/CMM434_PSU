@@ -8,7 +8,8 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="css/lightbox.min.css">
 
@@ -24,14 +25,14 @@
 			<div class="container">
 				<h1><a href=""><span class="thin">ClubHub</span></a></h1>
 				<ul class="nav-links">
-					<li><a href="#photography">Photo</a></li>
-					<li><a href="#videography">Video</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#photography">Find</a></li>
+					<li><a href="#videography">Create</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 
+	<!--
 	<section class="club-carousel">
 		<a href="" class="club-card">
 			<p class="title">Club International</p>
@@ -45,59 +46,122 @@
 			<p class="title">JCAP</p>
 			<img class="logo" src="img/jcap.jpg" alt="">
 		</a>
+		<a href="" class="club-card">
+			<p class="title">Club International</p>
+			<img class="logo" src="img/club-international.jpg" alt="">
+		</a>
+		<a href="" class="club-card">
+			<p class="title">Chinese Association</p>
+			<img class="logo" src="img/chinese-association.jpg" alt="">
+		</a>
+		<a href="" class="club-card">
+			<p class="title">JCAP</p>
+			<img class="logo" src="img/jcap.jpg" alt="">
+		</a>
+		<a href="" class="club-card">
+			<p class="title">Club International</p>
+			<img class="logo" src="img/club-international.jpg" alt="">
+		</a>
+		<a href="" class="club-card">
+			<p class="title">Chinese Association</p>
+			<img class="logo" src="img/chinese-association.jpg" alt="">
+		</a>
+		<a href="" class="club-card">
+			<p class="title">JCAP</p>
+			<img class="logo" src="img/jcap.jpg" alt="">
+		</a>
 	</section>
+	-->
+
+	<section class="club-carousel">
+	</section>
+
+	<section class="info-section">
+		<h2>Find a Club</h2>
+
+		<div class="content">
+			<img alt="" src="./img/get-involved-a.jpg" />
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate facere natus vel maiores,
+				inventore earum fuga exercitationem tenetur, excepturi laborum odit? Eligendi blanditiis voluptatibus
+				nam atque, amet maiores illum.
+				<a href="#">A link goes here.</a>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam est nesciunt cupiditate, saepe tenetur
+				adipisci blanditiis iste reiciendis laborum dolor at repellat non nihil a error voluptatum veritatis
+				aliquid optio!
+			</p>
+		</div>
+
+		<a href="find" class="button-wrapper">
+			<div class="button">
+				Button
+			</div>
+		</a>
+	</section>
+
+
+	<section class="club-carousel">
+	</section>
+
+	<section class="info-section">
+		<h2>Create a Club</h2>
+
+		<div class="content">
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cupiditate facere natus vel maiores,
+				inventore earum fuga exercitationem tenetur, excepturi laborum odit? Eligendi blanditiis voluptatibus
+				nam atque, amet maiores illum.
+				<a href="#">A link goes here.</a>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam est nesciunt cupiditate, saepe tenetur
+				adipisci blanditiis iste reiciendis laborum dolor at repellat non nihil a error voluptatum veritatis
+				aliquid optio!
+			</p>
+
+			<img alt="" src="./img/get-involved-b.jpg" />
+		</div>
+
+		<a href="create" class="button-wrapper">
+			<div class="button">
+				Button
+			</div>
+		</a>
+	</section>
+
+
+	<footer>
+		<nav>
+			<ul class="social-icons">
+				<li class="social-icon">
+					<a href="#" class="facebook">
+						<i class="fab fa-facebook"></i>
+						<p>Facebook Username</p>
+					</a>
+				</li>
+				<li class="social-icon">
+					<a href="#" class="instagram">
+						<i class="fab fa-instagram"></i>
+						<p>Instagram Username</p>
+					</a>
+				</li>
+				<li class="social-icon">
+					<a href="#" class="snapchat">
+						<i class="fab fa-snapchat"></i>
+						<p>Snapchat Username</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="sa-blob">
+			<img src="./img/sa-logo.png" alt="Student Association Logo" />
+			<span class="copyright">Copyright &copy; Student Association 2019</span>
+		</div>
+	</footer>
+
+
 
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 
-	<script>
-		let paused = false;
-
-		function setupPositions() {
-			$('.club-card').each(function (index) {
-				var width = $(this).width();
-				$(this).css({
-					'left': index * width
-				});
-
-				var position = $(this).position();
-				var left = position.left;
-				console.log("Starting at: " + left);
-			});
-		}
-
-		function moveLeft(element, amt) {
-
-			if (paused) return;
-
-			var width = element.width();
-			var position = element.position();
-			var left = position.left;
-			var viewportWidth = $(window).width();
-
-			element.css({
-				'left': (left - amt > (-(width)) ? left - amt : viewportWidth + width)
-			});
-		}
-
-		function moveAllLeft() {
-			$('.club-card').each(function (index) {
-				moveLeft($(this), 1);
-			});
-		}
-
-		function start() {
-			setInterval(moveAllLeft, 1000 / 60);
-		}
-
-		$('.club-card').hover(function () {
-			paused = true;
-		}, function () {
-			paused = false;
-		});
-
-		setupPositions();
-		start();
-	</script>
+	<!-- <script src="./js/card-carousel.js"></script> -->
 
 </body>
 

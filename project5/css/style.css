@@ -4,11 +4,61 @@ html {
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-header>nav {
-  background-color: #f2f2f2;
+header nav {
+  background-color: #FFFFFF;
+  padding: 1em 0;
+  display: flex;
+  justify-content: center;
+}
+header nav h1 {
+  display: inline-block;
+  font-size: 3em;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+header nav h1 a {
+  text-decoration: none;
+  color: #000000;
+}
+header nav ul {
+  display: inline-block;
+}
+header nav ul li {
+  display: inline-block;
+  margin-right: 1em;
+  font-size: 1.25em;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+section {
+  padding: 1em 0 2em 0;
+}
+section .content {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+section .content img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 1em 1em 0;
+  overflow: hidden;
+}
+section .content p {
+  width: calc(70% - 2em);
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+section .content p a {
+  text-decoration: none;
 }
 
 .club-carousel {
@@ -17,8 +67,9 @@ header>nav {
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  background-color: #e2e2e2;
+  box-shadow: inset 0 0 10px #00000040;
 }
-
 .club-carousel .club-card {
   position: absolute;
   top: 0;
@@ -26,11 +77,9 @@ header>nav {
   height: 100%;
   transform: translate3d(0, 0, 0);
 }
-
-.club-carousel a {
+.club-carousel .club-card a {
   text-decoration: none;
 }
-
 .club-carousel .club-card .title {
   position: absolute;
   bottom: 0.5em;
@@ -40,10 +89,91 @@ header>nav {
   color: #FFFFFF;
   text-shadow: 2px 2px #000000;
 }
-
 .club-carousel .club-card .logo {
   z-index: -1;
   width: 200px;
   height: 200px;
   object-fit: cover;
 }
+
+.button {
+  background-color: #C8102E;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.button-wrapper {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.15em;
+}
+
+.info-section {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.info-section h2 {
+  padding: 1em 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.75em;
+}
+
+.info-section p {
+  line-height: 1.5em;
+  padding-bottom: 1em;
+}
+
+footer {
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #FFFFFF00 0%, #e2e2e2 100%);
+}
+footer nav .social-icons {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1em 0;
+}
+footer nav .social-icons .social-icon {
+  display: inline-block;
+  padding: 0.5em;
+  font-size: 2em;
+  text-decoration: none;
+  text-align: center;
+}
+footer nav .social-icons .social-icon a {
+  text-decoration: none;
+}
+footer nav .social-icons .social-icon p {
+  text-transform: uppercase;
+  font-size: 0.3em;
+}
+footer nav .social-icons .social-icon .facebook {
+  color: blue;
+}
+footer nav .social-icons .social-icon .instagram {
+  color: #8a217c;
+}
+footer nav .social-icons .social-icon .snapchat {
+  color: #cfbd14;
+}
+footer .sa-blob {
+  display: flex;
+  justify-content: center;
+}
+footer .sa-blob img {
+  width: 60px;
+  height: 100%;
+}
+footer .sa-blob .copyright {
+  padding: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */
