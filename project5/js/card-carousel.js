@@ -1,68 +1,88 @@
+let cardsArr = [];
+
+let minX = -1;
+let maxX = -1;
+
 let paused = false;
-let clubCardWidth = $('.club-card').width();
 
-console.log(`Club card width is ${clubCardWidth}`);
-
-let minX;
-let maxX;
-
-function setupPositions() {
-    var cardsAmt = $('.club-card').length;
-
-    minX = -clubCardWidth;
-    maxX = (cardsAmt * clubCardWidth) + clubCardWidth;
-
-    console.log(`Card minX is ${minX}, maxX is ${maxX}`);
-
-    $('.club-card').each(function (index) {
-        var width = $(this).width();
-        $(this).css({
-            'left': index * width
-        });
-
-        var position = $(this).position();
-        var left = position.left;
-        console.log("Starting at: " + left);
-    });
+/**
+ * Gets the narrowest and widest card widths
+ * @param {*} cards The jQuery objects in a standard array
+ */
+function getExtents() {
+    let narrowest = -1;
+    let widest = -1;
+    for (let i = 0; i < cardsArr.length; i++) {
+        let card = cardsArr[i];
+        if (narrowest === -1 || card.width < narrowest)
+            narrowest = card.width();
+        else if (widest === -1 || card.width > widest)
+            widest = card.width();
+    }
+    return { narrowest: narrowest, widest: widest };
 }
 
-function moveLeft(element, amt) {
+function initialize() {
+    // put cards in array
+    cardsArr = [];
+    $('.club-card').each(function () {
+        cardsArr.push($(this));
+    });
 
-    if (paused) return;
+    // calculate extents
+    let extents = getExtents(cardsArr);
+    minX = -extents.narrowest;
+    maxX = extents.widest;
 
-    var width = element.width();
+    // setup the initial positions
+    setupPositions();
+}
+
+function setupPositions() {
+    let lastX = 0;
+    let index = 0;
+    for (const card of cardsArr) {
+        let newX = index == 0 ? 0 : lastX + card.width();
+        card.css({
+            'left': newX
+        });
+        lastX = newX;
+        index++;
+    }
+}
+
+function getLastCardX() {
+    let maxX = -1;
+    for (const card of cardsArr) {
+        let left = parseInt(card.css('left'), 10);
+        let width = card.width();
+        let x = left + width;
+        if (maxX === -1 || x > maxX) maxX = x;
+    }
+    return maxX;
+}
+
+function moveLeft(element, amtInPixels) {
     var position = element.position();
     var left = position.left;
-    var viewportWidth = $(window).width();
-
     element.css({
-        'left': (left - amt < minX ? maxX : left - amt)
+        'left': (left - amtInPixels < minX ? getLastCardX() : left - amtInPixels)
     });
 }
 
 function moveAllLeft() {
-    $('.club-card').each(function (index) {
-        moveLeft($(this), 1);
-    });
+    if(paused) return;
+    for (const card of cardsArr) {
+        moveLeft(card, 1);
+    }
 }
 
-function getLastCardPosition() {
+initialize();
 
-}
-
-function getAfterLastCardPosition() {
-
-}
-
-function start() {
-    setInterval(moveAllLeft, 1000 / 60);
-}
+setInterval(moveAllLeft, 1000 / 60);
 
 $('.club-card').hover(function () {
     paused = true;
 }, function () {
     paused = false;
 });
-
-setupPositions();
-start();
