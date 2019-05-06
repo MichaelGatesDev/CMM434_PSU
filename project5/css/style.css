@@ -190,4 +190,71 @@ footer .sa-blob .copyright {
   padding: 1em;
 }
 
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  /* border: 1px solid red; */
+}
+.photo-grid .grid-item {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.photo-grid .grid-item img {
+  padding: 0;
+}
+
+.photo-gallery li {
+  display: inline-block;
+  /* padding: 20px 20px; */
+  font-size: 30px;
+  text-align: center;
+}
+.photo-gallery li img {
+  min-width: 100px;
+  min-height: 100px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.officer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+}
+.officer-grid .grid-item {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+}
+.officer-grid .grid-item a {
+  text-decoration: none;
+}
+.officer-grid .grid-item img {
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.officer-grid .grid-item p {
+  width: 100%;
+  padding: 0;
+}
+.officer-grid .grid-item p.name {
+  font-weight: bold;
+  font-size: 1.25em;
+  padding-top: 1em;
+}
+.officer-grid .grid-item p.title {
+  padding-top: 0.5em;
+}
+
 /*# sourceMappingURL=style.css.map */
