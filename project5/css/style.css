@@ -8,7 +8,7 @@ body {
 }
 
 header nav {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 1em 0;
   display: flex;
   justify-content: center;
@@ -75,6 +75,7 @@ section .content p a {
   }
 }
 .club-carousel {
+  padding: 0;
   height: 200px;
   margin: 0 auto;
   position: relative;
@@ -95,11 +96,11 @@ section .content p a {
 }
 .club-carousel .club-card .title {
   position: absolute;
-  bottom: 0.5em;
+  bottom: 0.25em;
   width: 200px;
   overflow: hidden;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 2px 2px #000000;
 }
 .club-carousel .club-card .logo {
@@ -110,7 +111,7 @@ section .content p a {
 }
 
 .button {
-  background-color: #C8102E;
+  background-color: #c8102e;
   text-align: center;
   margin: 0 auto;
   padding: 1em;
@@ -146,7 +147,7 @@ footer {
   justify-items: center;
   justify-self: center;
   flex-direction: column;
-  background: linear-gradient(to bottom, #FFFFFF00 0%, #e2e2e2 100%);
+  background: linear-gradient(to bottom, #ffffff00 0%, #e2e2e2 100%);
 }
 footer nav .social-icons {
   display: flex;

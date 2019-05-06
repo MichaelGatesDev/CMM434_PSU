@@ -1,5 +1,5 @@
-$primaryButtonColor: #C8102E;
-$footerGradient: linear-gradient(to bottom, #FFFFFF00 0%, #e2e2e2 100%);
+$primaryButtonColor: #c8102e;
+$footerGradient: linear-gradient(to bottom, #ffffff00 0%, #e2e2e2 100%);
 
 $facebookColor: blue;
 $instagramColor: #8a217c;
@@ -11,14 +11,12 @@ html {
 }
 
 body {
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
-
 header {
-
   nav {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     padding: 1em 0;
 
     display: flex;
@@ -58,7 +56,6 @@ section {
   padding: 1em 0 2em 0;
 
   .content {
-
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -74,7 +71,6 @@ section {
       overflow: hidden;
     }
 
-
     p {
       width: calc(70% - 2em);
       line-height: 1.5em;
@@ -87,8 +83,6 @@ section {
   }
 }
 
-
-
 @media only screen and (max-width: 800px) {
   section {
     .content {
@@ -98,15 +92,15 @@ section {
         width: 100%;
         padding: 0 0 1em 0;
       }
-      p{
+      p {
         width: 100%;
       }
     }
   }
 }
 
-
 .club-carousel {
+  padding: 0;
   height: 200px;
   margin: 0 auto;
   position: relative;
@@ -129,11 +123,11 @@ section {
 
     .title {
       position: absolute;
-      bottom: 0.5em;
+      bottom: 0.25em;
       width: 200px;
       overflow: hidden;
       text-align: center;
-      color: #FFFFFF;
+      color: #ffffff;
       text-shadow: 2px 2px #000000;
     }
 
@@ -145,8 +139,6 @@ section {
     }
   }
 }
-
-
 
 .button {
   background-color: $primaryButtonColor;
@@ -179,7 +171,6 @@ section {
   padding-bottom: 1em;
 }
 
-
 footer {
   padding: 1em;
 
@@ -192,7 +183,6 @@ footer {
   background: $footerGradient;
 
   nav {
-
     .social-icons {
       display: flex;
       justify-content: center;
@@ -245,5 +235,4 @@ footer {
       padding: 1em;
     }
   }
-
 }
