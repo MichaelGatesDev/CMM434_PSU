@@ -19,7 +19,10 @@ function getExtents() {
         else if (widest === -1 || card.width > widest)
             widest = card.width();
     }
-    return { narrowest: narrowest, widest: widest };
+    return {
+        narrowest: narrowest,
+        widest: widest
+    };
 }
 
 function initialize() {
@@ -71,7 +74,7 @@ function moveLeft(element, amtInPixels) {
 }
 
 function moveAllLeft() {
-    if(paused) return;
+    if (paused) return;
     for (const card of cardsArr) {
         moveLeft(card, 1);
     }
@@ -83,6 +86,12 @@ setInterval(moveAllLeft, 1000 / 60);
 
 $('.club-card').hover(function () {
     paused = true;
+    $(this).find('.title').css({
+        display: 'block'
+    });
 }, function () {
     paused = false;
+    $(this).find('.title').css({
+        display: 'none'
+    });
 });
