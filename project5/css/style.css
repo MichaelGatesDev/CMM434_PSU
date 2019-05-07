@@ -179,6 +179,7 @@ footer .sa-blob .copyright {
 }
 
 .photo-grid {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 20px;
@@ -245,6 +246,11 @@ footer .sa-blob .copyright {
   padding-top: 0.5em;
 }
 
+@media only screen and (max-width: 1150px) {
+  .info-section {
+    width: 90vw;
+  }
+}
 @media only screen and (max-width: 1050px) {
   section .content img {
     width: 300px;

@@ -256,6 +256,7 @@ footer {
 }
 
 .photo-grid {
+  overflow: hidden;
   display: grid;
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -336,6 +337,12 @@ footer {
     p.title {
       padding-top: 0.5em;
     }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .info-section {
+    width: 90vw;
   }
 }
 
