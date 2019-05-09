@@ -15,12 +15,32 @@ body {
 }
 
 header {
+
+  display: flex;
+  justify-content: center;
+
+  nav.flex-center {
+    .container {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      justify-self: center;
+
+      .nav-links {
+        display: flex;
+
+        li {
+          line-height: 50px;
+          justify-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
   nav {
     background-color: #ffffff;
     padding: 1em 0;
-
-    display: flex;
-    justify-content: center;
 
     h1 {
       display: inline-block;
@@ -52,36 +72,12 @@ header {
   }
 }
 
-// section {
-//   padding: 1em 0 2em 0;
-
-//   .content {
-//     display: flex;
-//     justify-content: center;
-//     justify-items: center;
-//     justify-self: center;
-
-//     img {
-//       width: 300px;
-//       height: 300px;
-//       object-fit: cover;
-//       padding: 0 1em 1em 0;
-//     }
-
-//     p {
-//       // width: calc(70% - 2em);
-//       line-height: 1.5em;
-//       font-size: 1.1em;
-
-//       a {
-//         text-decoration: none;
-//       }
-//     }
-//   }
-// }
-
 section {
-  padding: 1em 0 2em 0;
+  padding: 1em 1em 2em 1em;
+
+  &:nth-child(even) {
+    background-color: #f2f2f2;
+  }
 
   .content {
 
@@ -172,10 +168,13 @@ section {
   font-size: 1.15em;
 }
 
-.info-section {
+
+.container {
   width: 75vw;
   margin: 0 auto;
+}
 
+.info-section {
   h2 {
     padding: 1em 0;
     text-align: center;
@@ -341,7 +340,7 @@ footer {
 }
 
 @media only screen and (max-width: 1150px) {
-  .info-section {
+  .container {
     width: 90vw;
   }
 }

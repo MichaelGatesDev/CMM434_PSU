@@ -7,11 +7,27 @@ body {
   font-family: "Roboto";
 }
 
+header {
+  display: flex;
+  justify-content: center;
+}
+header nav.flex-center .container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+header nav.flex-center .container .nav-links {
+  display: flex;
+}
+header nav.flex-center .container .nav-links li {
+  line-height: 50px;
+  justify-items: center;
+  justify-content: center;
+}
 header nav {
   background-color: #ffffff;
   padding: 1em 0;
-  display: flex;
-  justify-content: center;
 }
 header nav h1 {
   display: inline-block;
@@ -37,7 +53,10 @@ header nav ul li a {
 }
 
 section {
-  padding: 1em 0 2em 0;
+  padding: 1em 1em 2em 1em;
+}
+section:nth-child(even) {
+  background-color: #f2f2f2;
 }
 section .content {
   height: 100%;
@@ -113,10 +132,11 @@ section .content p a {
   font-size: 1.15em;
 }
 
-.info-section {
+.container {
   width: 75vw;
   margin: 0 auto;
 }
+
 .info-section h2 {
   padding: 1em 0;
   text-align: center;
@@ -247,7 +267,7 @@ footer .sa-blob .copyright {
 }
 
 @media only screen and (max-width: 1150px) {
-  .info-section {
+  .container {
     width: 90vw;
   }
 }
