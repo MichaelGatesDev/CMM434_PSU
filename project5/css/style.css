@@ -185,7 +185,7 @@ footer nav .social-icons .social-icon .instagram {
   color: #8a217c;
 }
 footer nav .social-icons .social-icon .snapchat {
-  color: #cfbd14;
+  color: #aa9900;
 }
 footer .sa-blob {
   display: flex;
@@ -320,6 +320,12 @@ section .content img.right {
 @media only screen and (max-width: 500px) {
   .club-carousel {
     display: none;
+  }
+
+  section .content img,
+section .content img.left,
+section .content img.right {
+    padding: 0;
   }
 }
 

@@ -3,7 +3,7 @@ $footerGradient: linear-gradient(to bottom, #ffffff00 0%, #e2e2e2 100%);
 
 $facebookColor: blue;
 $instagramColor: #8a217c;
-$snapchatColor: #cfbd14;
+$snapchatColor: #aa9900;
 
 html {
   scroll-behavior: smooth;
@@ -421,5 +421,15 @@ footer {
 @media only screen and (max-width: 500px) {
   .club-carousel {
     display: none;
+  }
+
+  section {
+    .content {
+      img,
+      img.left,
+      img.right {
+        padding: 0;
+      }
+    }
   }
 }
