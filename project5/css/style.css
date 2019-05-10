@@ -229,7 +229,7 @@ footer .sa-blob .copyright {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 100px;
-  grid-row-gap: 50px;
+  grid-row-gap: 75px;
 }
 .gallery .officer-grid .grid-item {
   display: flex;
