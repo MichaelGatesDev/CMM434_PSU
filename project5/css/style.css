@@ -262,6 +262,28 @@ footer .sa-blob .copyright {
   padding-top: 0.5em;
 }
 
+.calendar {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+.calendar iframe {
+  border-width: 0;
+  width: 100%;
+  height: 55vh;
+}
+
+.calendar-mobile {
+  display: none;
+  justify-content: center;
+  justify-items: center;
+}
+.calendar-mobile iframe {
+  border-width: 0;
+  width: 100%;
+  height: 55vh;
+}
+
 @media only screen and (max-width: 1270px) {
   .photo-grid {
     grid-template-columns: 200px 200px 200px !important;
@@ -311,6 +333,21 @@ section .content img.right {
 @media only screen and (max-width: 650px) {
   .officer-grid {
     grid-template-columns: 200px !important;
+  }
+
+  .calendar {
+    display: none;
+  }
+
+  .calendar-mobile {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+  }
+  .calendar-mobile iframe {
+    border-width: 0;
+    width: 100%;
+    height: 55vh;
   }
 }
 @media only screen and (max-width: 500px) {
