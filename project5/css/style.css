@@ -66,12 +66,13 @@ section .content {
 section .content img {
   width: 400px;
   object-fit: cover;
-  padding: 0 1em 1em 0;
 }
 section .content img.left {
+  padding: 0 1em 1em 0;
   float: left;
 }
 section .content img.right {
+  padding: 0 0 1em 1em;
   float: right;
 }
 section .content p {
@@ -300,7 +301,6 @@ footer .sa-blob .copyright {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    padding: 0 1em 1em 0;
   }
   section .content img.left,
 section .content img.right {
