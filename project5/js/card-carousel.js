@@ -80,18 +80,32 @@ function moveAllLeft() {
     }
 }
 
-initialize();
+let interval;
 
-setInterval(moveAllLeft, 1000 / 60);
+function start() {
+    if (interval) {
+        clearInterval(interval);
+    }
+    initialize();
+    interval = setInterval(moveAllLeft, 1000 / 60);
 
-$('.club-card').hover(function () {
-    paused = true;
-    $(this).find('.title').css({
-        display: 'block'
+    $('.club-card').hover(function () {
+        paused = true;
+        $(this).find('.title').css({
+            display: 'block'
+        });
+    }, function () {
+        paused = false;
+        $(this).find('.title').css({
+            display: 'none'
+        });
     });
-}, function () {
-    paused = false;
-    $(this).find('.title').css({
-        display: 'none'
-    });
+}
+
+$(document).ready(function () {
+    start();
+});
+
+$(window).resize(function () {
+    start();
 });
