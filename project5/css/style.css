@@ -296,6 +296,7 @@ footer .sa-blob .copyright {
 }
 @media only screen and (max-width: 1050px) {
   section .content img {
+    transition: 0.25s ease-in;
     width: 300px;
     height: 300px;
     object-fit: cover;
@@ -312,6 +313,7 @@ footer .sa-blob .copyright {
 }
 @media only screen and (max-width: 900px) {
   section .content img {
+    transition: 0.25s ease-in;
     width: 250px;
     height: 300px;
     object-fit: cover;
@@ -320,6 +322,7 @@ footer .sa-blob .copyright {
 }
 @media only screen and (max-width: 800px) {
   section .content img {
+    transition: 0.25s ease-in;
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -359,6 +362,9 @@ section .content img.right {
 section .content img.left,
 section .content img.right {
     padding: 0;
+  }
+  section .content p {
+    padding-top: 1em;
   }
 }
 
