@@ -148,6 +148,13 @@ section {
       width: 200px;
       height: 200px;
       object-fit: cover;
+      object-position: 50% 50%;
+
+      transition: 0.1s ease-in;
+      &:hover {
+        transform: scale(1.01);
+        transition: 0.1s ease-in;
+      }
     }
   }
 }
@@ -223,14 +230,35 @@ footer {
 
         .facebook {
           color: $facebookColor;
+
+          &:hover {
+            color: darken($facebookColor, 20%);
+            transition: 0.15s ease-in-out;
+          }
+
+          transition: 0.15s ease-in-out;
         }
 
         .instagram {
           color: $instagramColor;
+
+          &:hover {
+            color: darken($instagramColor, 20%);
+            transition: 0.15s ease-in-out;
+          }
+
+          transition: 0.15s ease-in-out;
         }
 
         .snapchat {
           color: $snapchatColor;
+
+          &:hover {
+            color: darken($snapchatColor, 20%);
+            transition: 0.15s ease-in-out;
+          }
+
+          transition: 0.15s ease-in-out;
         }
       }
     }
@@ -335,6 +363,7 @@ footer {
   display: flex;
   justify-content: center;
   justify-items: center;
+
   iframe {
     border-width: 0;
     width: 100%;
@@ -346,6 +375,7 @@ footer {
   display: none;
   justify-content: center;
   justify-items: center;
+
   iframe {
     border-width: 0;
     width: 100%;
@@ -433,6 +463,7 @@ footer {
     display: flex;
     justify-content: center;
     justify-items: center;
+
     iframe {
       border-width: 0;
       width: 100%;
@@ -448,11 +479,13 @@ footer {
 
   section {
     .content {
+
       img,
       img.left,
       img.right {
         padding: 0;
       }
+
       p {
         padding-top: 1em;
       }

@@ -118,6 +118,12 @@ section .content p a {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  object-position: 50% 50%;
+  transition: 0.1s ease-in;
+}
+.club-carousel .club-card .logo:hover {
+  transform: scale(1.01);
+  transition: 0.1s ease-in;
 }
 
 .button {
@@ -180,12 +186,27 @@ footer nav .social-icons .social-icon p {
 }
 footer nav .social-icons .social-icon .facebook {
   color: blue;
+  transition: 0.15s ease-in-out;
+}
+footer nav .social-icons .social-icon .facebook:hover {
+  color: #000099;
+  transition: 0.15s ease-in-out;
 }
 footer nav .social-icons .social-icon .instagram {
   color: #8a217c;
+  transition: 0.15s ease-in-out;
+}
+footer nav .social-icons .social-icon .instagram:hover {
+  color: #380d32;
+  transition: 0.15s ease-in-out;
 }
 footer nav .social-icons .social-icon .snapchat {
   color: #aa9900;
+  transition: 0.15s ease-in-out;
+}
+footer nav .social-icons .social-icon .snapchat:hover {
+  color: #443d00;
+  transition: 0.15s ease-in-out;
 }
 footer .sa-blob {
   display: flex;
