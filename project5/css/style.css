@@ -39,6 +39,9 @@ header nav h1 a {
   text-decoration: none;
   color: #000000;
 }
+header nav h1 a:hover {
+  color: #2e2e2e;
+}
 header nav ul {
   display: inline-block;
 }
@@ -50,6 +53,10 @@ header nav ul li {
 header nav ul li a {
   text-decoration: none;
   color: #000000;
+  padding: 0 0.5em;
+}
+header nav ul li a:hover {
+  color: #2e2e2e;
 }
 
 section {
@@ -245,6 +252,11 @@ footer .sa-blob .copyright {
   width: 200px;
   height: 200px;
   object-fit: cover;
+  transition: 0.15s ease-in-out;
+}
+.gallery .photo-grid .grid-item img:hover {
+  transition: 0.15s ease-in-out;
+  transform: scale(1.05);
 }
 .gallery .officer-grid {
   display: grid;
@@ -307,6 +319,7 @@ footer .sa-blob .copyright {
 
 @media only screen and (max-width: 1270px) {
   .photo-grid {
+    /* I have to use !important here because for some reason this, grid-template-columns does not change after it's been set without overriding it with !important */
     grid-template-columns: 200px 200px 200px !important;
   }
 }

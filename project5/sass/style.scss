@@ -50,6 +50,10 @@ header {
       a {
         text-decoration: none;
         color: #000000;
+
+        &:hover {
+          color: #2e2e2e;
+        }
       }
     }
 
@@ -65,6 +69,11 @@ header {
         a {
           text-decoration: none;
           color: #000000;
+          padding: 0 0.5em;
+
+          &:hover {
+            color: #2e2e2e;
+          }
         }
       }
     }
@@ -151,6 +160,7 @@ section {
       object-position: 50% 50%;
 
       transition: 0.1s ease-in;
+
       &:hover {
         transform: scale(1.01);
         transition: 0.1s ease-in;
@@ -309,6 +319,13 @@ footer {
         height: 200px;
 
         object-fit: cover;
+
+        transition: 0.15s ease-in-out;
+
+        &:hover {
+          transition: 0.15s ease-in-out;
+          transform: scale(1.05);
+        }
       }
     }
   }
@@ -329,6 +346,7 @@ footer {
       text-align: center;
 
       width: 200px;
+
 
       a {
         text-decoration: none;
@@ -385,6 +403,7 @@ footer {
 
 @media only screen and (max-width: 1270px) {
   .photo-grid {
+    /* I have to use !important here because for some reason this, grid-template-columns does not change after it's been set without overriding it with !important */
     grid-template-columns: 200px 200px 200px !important;
   }
 }
